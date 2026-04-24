@@ -1,7 +1,7 @@
 // ضع قيم مشروع Sanity هنا بعد إنشاء المشروع من sanity.io/manage.
 // projectId: معرف المشروع، dataset: غالبًا "production" إذا لم تغيّره.
 window.NAZ_SANITY_CONFIG = {
-  projectId: "YOUR_SANITY_PROJECT_ID",
+  projectId: "4bcyxx13",
   dataset: "production",
   apiVersion: "2026-04-24",
   useCdn: true,
