@@ -1,5 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const selectedSlug = params.get("project") || "urban";
+console.log("Project slug from URL:", selectedSlug);
 
 const projectPage = document.querySelector(".project-page");
 const gallery = document.querySelector("#projectGallery");
@@ -28,7 +29,7 @@ function setText(selector, value) {
 
 function setProjectContent(project) {
   document.title = `${project.title} | Naz Graphic`;
-  setText("#projectKicker", project.type || "Case Study");
+  setText("#projectKicker", project.type || "دراسة مشروع");
   setText("#detailTitle", project.title);
   setText("#detailLead", project.lead || project.shortDescription);
   setText("#detailClient", project.client);
@@ -84,6 +85,11 @@ async function initProjectPage() {
   setProjectStatus("جاري تحميل المشروع...", "loading");
 
   const { project, error } = await window.NazCMS.fetchPortfolioProject(selectedSlug);
+
+  if (error && !project) {
+    setProjectStatus("تعذر تحميل المشروع من Sanity. تأكد من إعدادات CORS أو جرّب تشغيل الموقع عبر localhost.", "error");
+    return;
+  }
 
   if (!project) {
     setProjectStatus("المشروع غير موجود.", "empty");

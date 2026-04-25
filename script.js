@@ -11,6 +11,8 @@ const heroRotator = document.querySelector("#heroRotator");
 let homeProjects = [];
 let activeProjectIndex = 0;
 let autoProjectTimer;
+let heroStageIndex = 0;
+let heroStageTimer;
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -35,18 +37,15 @@ let ringX = 0;
 let ringY = 0;
 
 function bindMagneticTargets(root = document) {
-  root.querySelectorAll("a, button, .magnetic").forEach((item) => {
+  root.querySelectorAll("[data-cursor]").forEach((item) => {
     if (item.dataset.cursorBound === "true") return;
     item.dataset.cursorBound = "true";
 
     item.addEventListener("pointerenter", () => {
       document.body.classList.remove("cursor-tone-yellow", "cursor-tone-blue", "cursor-tone-cyan", "cursor-tone-green");
-      document.body.classList.add("cursor-soft");
-      if (item.dataset.cursor) {
-        document.body.classList.add("cursor-hover");
-        if (cursorRing) cursorRing.dataset.label = item.dataset.cursor;
-        if (item.dataset.cursorTone) document.body.classList.add(`cursor-tone-${item.dataset.cursorTone}`);
-      }
+      document.body.classList.add("cursor-soft", "cursor-hover");
+      if (cursorRing) cursorRing.dataset.label = item.dataset.cursor || "ألقِ نظرة";
+      if (item.dataset.cursorTone) document.body.classList.add(`cursor-tone-${item.dataset.cursorTone}`);
     });
 
     item.addEventListener("pointerleave", () => {
@@ -55,7 +54,7 @@ function bindMagneticTargets(root = document) {
     });
   });
 
-  root.querySelectorAll(".magnetic").forEach((item) => {
+  root.querySelectorAll("[data-cursor], .primary-action, .pill-link").forEach((item) => {
     if (item.dataset.magneticBound === "true") return;
     item.dataset.magneticBound = "true";
 
@@ -123,6 +122,8 @@ if (heroRotator) {
 }
 
 const stage = document.querySelector(".hero-stage");
+const heroProjectCards = [...document.querySelectorAll(".hero-stage .project-preview")];
+const heroCursorTones = ["green", "blue", "cyan"];
 
 if (stage && window.matchMedia("(pointer: fine)").matches) {
   stage.addEventListener("pointermove", (event) => {
@@ -139,6 +140,39 @@ if (stage && window.matchMedia("(pointer: fine)").matches) {
 
 function getProjectUrl(project) {
   return `project.html?project=${encodeURIComponent(project.slug)}`;
+}
+
+function renderHeroProjects(startIndex = 0) {
+  if (!stage || !heroProjectCards.length || !homeProjects.length) return;
+
+  stage.classList.add("is-changing");
+  heroProjectCards.forEach((card, cardIndex) => {
+    const project = homeProjects[(startIndex + cardIndex) % homeProjects.length];
+    const image = card.querySelector("img");
+    const label = card.querySelector("span");
+
+    if (!project || !image || !label) return;
+    card.href = getProjectUrl(project);
+    card.dataset.cursor = "ألقِ نظرة";
+    card.dataset.cursorTone = heroCursorTones[cardIndex % heroCursorTones.length];
+    card.setAttribute("aria-label", `فتح صفحة ${project.title}`);
+    image.src = project.coverImage || "";
+    image.alt = project.title;
+    label.textContent = project.title;
+  });
+
+  window.setTimeout(() => stage.classList.remove("is-changing"), 360);
+  bindMagneticTargets(stage);
+}
+
+function restartHeroStageAutoplay() {
+  window.clearInterval(heroStageTimer);
+  if (!heroProjectCards.length || homeProjects.length < 2) return;
+
+  heroStageTimer = window.setInterval(() => {
+    heroStageIndex = (heroStageIndex + 1) % homeProjects.length;
+    renderHeroProjects(heroStageIndex);
+  }, 5200);
 }
 
 function showWorkState(message, type = "loading") {
@@ -225,6 +259,8 @@ async function initHomeProjects() {
   }
 
   setProject(homeProjects[0].slug);
+  renderHeroProjects(0);
+  restartHeroStageAutoplay();
   restartProjectAutoplay();
 }
 
@@ -274,6 +310,8 @@ const processPreviewCaption = document.querySelector("#processPreviewCaption");
 document.querySelectorAll(".process-step[data-process-image]").forEach((step) => {
   step.addEventListener("pointerenter", () => {
     if (!processPreview || !processPreviewImage || !processPreviewCaption) return;
+    document.querySelectorAll(".process-step").forEach((item) => item.classList.remove("is-active"));
+    step.classList.add("is-active");
     processPreview.classList.add("is-changing");
     window.setTimeout(() => {
       processPreviewImage.src = step.dataset.processImage;
@@ -283,3 +321,5 @@ document.querySelectorAll(".process-step[data-process-image]").forEach((step) =>
     }, 120);
   });
 });
+
+document.querySelector(".process-step[data-process-image]")?.classList.add("is-active");
