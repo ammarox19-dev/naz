@@ -7,6 +7,7 @@ const projectMedia = document.querySelector("#projectMedia");
 const projectLink = document.querySelector("#projectLink");
 const themeToggle = document.querySelector(".theme-toggle");
 const heroRotator = document.querySelector("#heroRotator");
+const allWorkGrid = document.querySelector("#allWorkGrid");
 
 let homeProjects = [];
 let activeProjectIndex = 0;
@@ -28,6 +29,49 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((item) => observer.observe(item));
 window.revealObserver = observer;
+
+function setupFaqAnimation() {
+  document.querySelectorAll(".faq-list details").forEach((details) => {
+    const summary = details.querySelector("summary");
+    if (!summary || details.dataset.faqBound === "true") return;
+    details.dataset.faqBound = "true";
+    details.style.overflow = "hidden";
+
+    summary.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (details.dataset.animating === "true") return;
+
+      const styles = window.getComputedStyle(details);
+      const paddingBlock = parseFloat(styles.paddingTop) + parseFloat(styles.paddingBottom);
+      const closedHeight = summary.offsetHeight + paddingBlock;
+      const timing = { duration: 360, easing: "cubic-bezier(.2,.8,.2,1)" };
+
+      details.dataset.animating = "true";
+
+      if (!details.open) {
+        const startHeight = details.offsetHeight;
+        details.open = true;
+        const endHeight = details.offsetHeight;
+        const animation = details.animate([{ height: `${startHeight}px` }, { height: `${endHeight}px` }], timing);
+        animation.onfinish = () => {
+          details.style.height = "";
+          details.dataset.animating = "false";
+        };
+        return;
+      }
+
+      const startHeight = details.offsetHeight;
+      const animation = details.animate([{ height: `${startHeight}px` }, { height: `${closedHeight}px` }], timing);
+      animation.onfinish = () => {
+        details.open = false;
+        details.style.height = "";
+        details.dataset.animating = "false";
+      };
+    });
+  });
+}
+
+setupFaqAnimation();
 
 const cursorDot = document.querySelector(".cursor-dot");
 const cursorRing = document.querySelector(".cursor-ring");
@@ -54,7 +98,7 @@ function bindMagneticTargets(root = document) {
     });
   });
 
-  root.querySelectorAll("[data-cursor], .primary-action, .pill-link").forEach((item) => {
+  root.querySelectorAll(".primary-action, .secondary-action, .pill-link").forEach((item) => {
     if (item.dataset.magneticBound === "true") return;
     item.dataset.magneticBound = "true";
 
@@ -124,6 +168,18 @@ if (heroRotator) {
 const stage = document.querySelector(".hero-stage");
 const heroProjectCards = [...document.querySelectorAll(".hero-stage .project-preview")];
 const heroCursorTones = ["green", "blue", "cyan"];
+const tabAccentPalette = [
+  { bg: "#1267F3", ink: "#F0F4F8" },
+  { bg: "#10DCE3", ink: "#080C10" },
+  { bg: "#12F082", ink: "#080C10" },
+  { bg: "#FF0050", ink: "#F0F4F8" },
+  { bg: "#5A008F", ink: "#F0F4F8" },
+  { bg: "#FFE766", ink: "#080C10" },
+];
+
+function getRandomTabAccent() {
+  return tabAccentPalette[Math.floor(Math.random() * tabAccentPalette.length)];
+}
 
 if (stage && window.matchMedia("(pointer: fine)").matches) {
   stage.addEventListener("pointermove", (event) => {
@@ -218,10 +274,13 @@ function renderWorkTabs(projects) {
   tabsContainer.innerHTML = projects
     .map(
       (project, index) => `
-        <button class="work-tab magnetic${index === 0 ? " is-selected" : ""}" data-project="${project.slug}" type="button">
+        ${(() => {
+          const accent = getRandomTabAccent();
+          return `<button class="work-tab magnetic${index === 0 ? " is-selected" : ""}" data-project="${project.slug}" style="--tab-accent: ${accent.bg}; --tab-ink: ${accent.ink};" type="button">
           <span>${String(index + 1).padStart(2, "0")}</span>
           ${project.title}
-        </button>
+        </button>`;
+        })()}
       `
     )
     .join("");
@@ -236,14 +295,46 @@ function renderWorkTabs(projects) {
   bindMagneticTargets(tabsContainer);
 }
 
+function renderAllWorkGrid(projects) {
+  if (!allWorkGrid) return;
+  const validProjects = projects.filter((project) => project.slug && project.coverImage);
+
+  if (!validProjects.length) {
+    allWorkGrid.innerHTML = `<p class="work-state work-state-empty">لا توجد أعمال منشورة حاليًا.</p>`;
+    return;
+  }
+
+  allWorkGrid.innerHTML = validProjects
+    .map((project, index) => {
+      const meta = project.year ? `مشروع ${project.year}` : "مشروع بصري";
+      return `
+        <a class="all-work-card all-work-card-${(index % 6) + 1}" href="${getProjectUrl(project)}" data-cursor="افتح العمل" data-cursor-tone="cyan" aria-label="فتح مشروع ${project.title}">
+          <img src="${project.coverImage}" alt="${project.title}" loading="lazy" />
+          <span class="all-work-index">${String(index + 1).padStart(2, "0")}</span>
+          <div class="all-work-meta">
+            <p>${meta}</p>
+            <h3>${project.title}</h3>
+          </div>
+        </a>
+      `;
+    })
+    .join("");
+
+  allWorkGrid.querySelectorAll(".all-work-card").forEach((card) => observer.observe(card));
+  bindMagneticTargets(allWorkGrid);
+}
+
 async function initHomeProjects() {
   if (!tabsContainer || !projectMedia) return;
   showWorkState("جاري تحميل الأعمال...", "loading");
 
   const { projects, error } = await window.NazCMS.fetchPortfolioProjects();
+  const allProjects = projects.filter((project) => project.slug);
   homeProjects = projects
     .filter((project) => project.showOnHome && project.slug)
     .sort((a, b) => Number(b.featured) - Number(a.featured));
+
+  renderAllWorkGrid(allProjects.length ? allProjects : homeProjects);
 
   if (!homeProjects.length) {
     showWorkState("لا توجد أعمال منشورة حاليًا.", "empty");

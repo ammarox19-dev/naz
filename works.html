@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>كل أعمال Naz Graphic</title>
+    <meta name="description" content="معرض كل أعمال Naz Graphic المنشورة من Sanity CMS." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="works-page">
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand magnetic" href="index.html#top" aria-label="Naz Graphic">
+        <span class="brand-mark">N</span>
+        <span>Naz Graphic</span>
+      </a>
+      <nav class="nav-links" aria-label="التنقل الرئيسي">
+        <a class="magnetic" href="index.html#top">الرئيسية</a>
+        <a class="magnetic is-active" href="works.html">الأعمال</a>
+        <a class="magnetic" href="about.html">من ناز</a>
+        <a class="magnetic" href="index.html#contact">التواصل</a>
+      </nav>
+      <div class="header-actions">
+        <a class="pill-link magnetic" href="mailto:NAZ@GMAIL.PRO">ابدأ مشروعك</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="works-hero section-shell">
+        <div class="works-hero-copy reveal">
+          <p class="eyebrow">كل الأعمال</p>
+          <h1>Portfolio Index</h1>
+          <p>
+            كل المشاريع المنشورة من Sanity في شبكة واحدة، هادئة وواضحة.
+          </p>
+        </div>
+        <div class="works-hero-panel reveal" aria-hidden="true">
+          <span>منشور</span>
+          <strong id="worksCount">00</strong>
+          <p>مشاريع قابلة للتصفح</p>
+        </div>
+      </section>
+
+      <section class="all-work all-work-archive section-shell">
+        <p class="archive-status reveal" id="worksStatus">جاري تحميل كل الأعمال...</p>
+        <div class="all-work-grid archive-grid reveal" id="allWorkArchive" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Naz Graphic</span>
+      <span>جميع الحقوق محفوظة لدى مصمم ناز</span>
+    </footer>
+
+    <script src="sanity.js"></script>
+    <script src="script.js"></script>
+    <script src="works.js"></script>
+  </body>
+</html>
