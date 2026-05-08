@@ -1,0 +1,140 @@
+[2m12:47:58 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mUnable to fetch Sanity data TypeError: Failed to fetch
+    at _$initInterceptor.s.fetch (chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js:1:3798)
+    at fetchFromSanity (http://127.0.0.1:5173/src/lib/sanity.ts:99:26)
+    at getFeaturedProjects (http://127.0.0.1:5173/src/lib/sanity.ts:111:25)
+    at http://127.0.0.1:5173/src/sections/SelectedWork.tsx:17:3
+    at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:12903:13)
+    at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:850:66)
+    at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6616:153)
+    at commitHookPassiveMountEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6651:55)
+    at reconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7700:6)
+    at recursivelyTraverseReconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7687:5)
+[2m12:47:58 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mUnable to fetch Sanity data TypeError: Failed to fetch
+    at _$initInterceptor.s.fetch (chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js:1:3798)
+    at fetchFromSanity (http://127.0.0.1:5173/src/lib/sanity.ts:99:26)
+    at getAllProjects (http://127.0.0.1:5173/src/lib/sanity.ts:119:25)
+    at http://127.0.0.1:5173/src/sections/Hero.tsx?t=1777636077676:24:35
+    at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:12903:13)
+    at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:850:66)
+    at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6616:153)
+    at commitHookPassiveMountEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6651:55)
+    at reconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7700:6)
+    at recursivelyTraverseReconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7687:5)
+[2m12:47:58 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mUnable to fetch Sanity data TypeError: Failed to fetch
+    at _$initInterceptor.s.fetch (chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js:1:3798)
+    at fetchFromSanity (http://127.0.0.1:5173/src/lib/sanity.ts:99:26)
+    at getPartners (http://127.0.0.1:5173/src/lib/sanity.ts:140:25)
+    at http://127.0.0.1:5173/src/components/PartnersMarquee.tsx:14:3
+    at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:12903:13)
+    at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:850:66)
+    at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6616:153)
+    at commitHookPassiveMountEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6651:55)
+    at reconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7700:6)
+    at recursivelyTraverseReconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7687:5)
+[2m12:47:58 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mUnable to fetch Sanity data TypeError: Failed to fetch
+    at _$initInterceptor.s.fetch (chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js:1:3798)
+    at fetchFromSanity (http://127.0.0.1:5173/src/lib/sanity.ts:99:26)
+    at getHeroProjects (http://127.0.0.1:5173/src/lib/sanity.ts:115:25)
+    at http://127.0.0.1:5173/src/sections/Hero.tsx?t=1777636077676:24:16
+    at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:12903:13)
+    at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:850:66)
+    at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6616:153)
+    at commitHookPassiveMountEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6651:55)
+    at reconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7700:6)
+    at recursivelyTraverseReconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7687:5)
+[2m12:47:59 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mUnable to fetch Sanity data TypeError: Failed to fetch
+    at _$initInterceptor.s.fetch (chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js:1:3798)
+    at chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js:1:1130
+    at fetchFromSanity (http://127.0.0.1:5173/src/lib/sanity.ts:99:26)
+    at getAllProjects (http://127.0.0.1:5173/src/lib/sanity.ts:119:25)
+    at http://127.0.0.1:5173/src/sections/Hero.tsx?t=1777636077676:24:35
+    at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:12903:13)
+    at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:850:66)
+    at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6616:153)
+    at commitHookPassiveMountEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6651:55)
+    at commitPassiveMountOnFiber (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7617:22)
+[2m12:47:59 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mUnable to fetch Sanity data TypeError: Failed to fetch
+    at _$initInterceptor.s.fetch (chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js:1:3798)
+    at chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js:1:1130
+    at fetchFromSanity (http://127.0.0.1:5173/src/lib/sanity.ts:99:26)
+    at getAllProjects (http://127.0.0.1:5173/src/lib/sanity.ts:119:25)
+    at http://127.0.0.1:5173/src/sections/Hero.tsx?t=1777636077676:24:35
+    at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:12903:13)
+    at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:850:66)
+    at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6616:153)
+    at commitHookPassiveMountEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6651:55)
+    at reconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7700:6)
+[2m12:47:59 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mUnable to fetch Sanity data TypeError: Failed to fetch
+    at _$initInterceptor.s.fetch (chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js:1:3798)
+    at chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js:1:1130
+    at fetchFromSanity (http://127.0.0.1:5173/src/lib/sanity.ts:99:26)
+    at getFeaturedProjects (http://127.0.0.1:5173/src/lib/sanity.ts:111:25)
+    at http://127.0.0.1:5173/src/sections/SelectedWork.tsx:17:3
+    at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:12903:13)
+    at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:850:66)
+    at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6616:153)
+    at commitHookPassiveMountEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6651:55)
+    at commitPassiveMountOnFiber (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7617:22)
+[2m12:47:59 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mUnable to fetch Sanity data TypeError: Failed to fetch
+    at _$initInterceptor.s.fetch (chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js:1:3798)
+    at chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js:1:1130
+    at fetchFromSanity (http://127.0.0.1:5173/src/lib/sanity.ts:99:26)
+    at getHeroProjects (http://127.0.0.1:5173/src/lib/sanity.ts:115:25)
+    at http://127.0.0.1:5173/src/sections/Hero.tsx?t=1777636077676:24:16
+    at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:12903:13)
+    at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:850:66)
+    at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6616:153)
+    at commitHookPassiveMountEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6651:55)
+    at commitPassiveMountOnFiber (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7617:22)
+[2m12:47:59 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mUnable to fetch Sanity data TypeError: Failed to fetch
+    at _$initInterceptor.s.fetch (chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js:1:3798)
+    at chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js:1:1130
+    at fetchFromSanity (http://127.0.0.1:5173/src/lib/sanity.ts:99:26)
+    at getHeroProjects (http://127.0.0.1:5173/src/lib/sanity.ts:115:25)
+    at http://127.0.0.1:5173/src/sections/Hero.tsx?t=1777636077676:24:16
+    at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:12903:13)
+    at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:850:66)
+    at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6616:153)
+    at commitHookPassiveMountEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6651:55)
+    at reconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7700:6)
+[2m12:47:59 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mUnable to fetch Sanity data TypeError: Failed to fetch
+    at _$initInterceptor.s.fetch (chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js:1:3798)
+    at chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js:1:1130
+    at fetchFromSanity (http://127.0.0.1:5173/src/lib/sanity.ts:99:26)
+    at getFeaturedProjects (http://127.0.0.1:5173/src/lib/sanity.ts:111:25)
+    at http://127.0.0.1:5173/src/sections/SelectedWork.tsx:17:3
+    at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:12903:13)
+    at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:850:66)
+    at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6616:153)
+    at commitHookPassiveMountEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6651:55)
+    at reconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7700:6)
+[2m12:47:59 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mUnable to fetch Sanity data TypeError: Failed to fetch
+    at _$initInterceptor.s.fetch (chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js:1:3798)
+    at chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js:1:1130
+    at fetchFromSanity (http://127.0.0.1:5173/src/lib/sanity.ts:99:26)
+    at getPartners (http://127.0.0.1:5173/src/lib/sanity.ts:140:25)
+    at http://127.0.0.1:5173/src/components/PartnersMarquee.tsx:14:3
+    at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:12903:13)
+    at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:850:66)
+    at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6616:153)
+    at commitHookPassiveMountEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6651:55)
+    at reconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7700:6)
+[2m12:47:59 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mUnable to fetch Sanity data TypeError: Failed to fetch
+    at _$initInterceptor.s.fetch (chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js:1:3798)
+    at chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/200.js:1:1130
+    at fetchFromSanity (http://127.0.0.1:5173/src/lib/sanity.ts:99:26)
+    at getPartners (http://127.0.0.1:5173/src/lib/sanity.ts:140:25)
+    at http://127.0.0.1:5173/src/components/PartnersMarquee.tsx:14:3
+    at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:12903:13)
+    at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:850:66)
+    at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6616:153)
+    at commitHookPassiveMountEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:6651:55)
+    at commitPassiveMountOnFiber (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=b9db0fea:7617:22)
+[2m2:09:52 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mEncountered two children with the same key, `Landing Pages`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+[2m2:09:52 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mEncountered two children with the same key, `Landing Pages`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+[2m3:18:39 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/sections/Hero.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2m3:18:39 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/sections/Hero.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2m3:18:39 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/sections/Hero.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2m3:54:38 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/sections/Hero.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2m3:54:38 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/sections/Hero.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+[2m3:54:38 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22m[vite] Failed to reload /src/sections/Hero.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
